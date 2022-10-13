@@ -2,17 +2,6 @@
 
 @section('content')
 
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Owalahh!</strong> Ada yang salah dari yang kamu masukkan.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <form action="{{ route('products.store') }}" method="POST">
     @csrf
     <div class="row">
