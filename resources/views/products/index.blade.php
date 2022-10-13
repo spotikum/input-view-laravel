@@ -1,5 +1,5 @@
 @extends('products.layout')
- 
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -8,13 +8,7 @@
             </div>
         </div>
     </div>
-   
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-   
+
     <table class="table table-bordered">
         <tr>
             <th>No</th>
@@ -29,7 +23,6 @@
         </tr>
         @endforeach
     </table>
-  
+
     {!! $products->links() !!}
-      
 @endsection
