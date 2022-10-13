@@ -17,12 +17,10 @@
         </tr>
         @foreach ($products as $product)
         <tr>
-            <td>{{ ++$i }}</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $product->name }}</td>
             <td>{{ $product->detail }}</td>
         </tr>
         @endforeach
     </table>
-
-    {!! $products->links() !!}
 @endsection
